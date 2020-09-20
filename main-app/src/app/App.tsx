@@ -21,7 +21,7 @@ function App() {
       <h1 className='f1'>RoboFriends</h1>
       <SearchBox setSearch={setSearchField} searchValue={searchField} />
       <Scroll>
-        {robotsData.length
+        {!robotsData.length
         ? <div className={styles.loader}></div> 
         : <CardsList robots={filtredRobots} />}
       </Scroll>
