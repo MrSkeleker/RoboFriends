@@ -1,0 +1,10 @@
+.scroll {
+	overflow-y: scroll;
+	border: 1px solid black;
+    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
