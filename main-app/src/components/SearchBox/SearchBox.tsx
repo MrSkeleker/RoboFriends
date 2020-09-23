@@ -11,7 +11,7 @@ function SearchBox(props: SearchBoxProps) {
         <input
             className='pa3 ba b--green bg-lightest-blue ma2'
             type='search'
-            placeholder='Search a friend'
+            placeholder='Search for robofriends'
             value={searchValue}
             onChange = {(event)=>setSearch(event.target.value)}
         />

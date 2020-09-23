@@ -1,0 +1,1 @@
+export const robotsDataUrl: string = 'https://jsonplaceholder.typicode.com/users';
