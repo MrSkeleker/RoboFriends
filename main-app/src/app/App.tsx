@@ -6,7 +6,9 @@ import styles from './App.module.scss';
 import CardsList from '../components/CardsList/CardsList';
 import SearchBox from '../components/SearchBox/SearchBox';
 import Scroll from '../components/Scroll/Scroll';
+import Header from '../components/Header/Header';
 import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary';
+
 import { setSearchField, requestRobots } from '../redux/actions/actions';
 
 function App(props: any) {
@@ -18,7 +20,7 @@ function App(props: any) {
   const filtredRobots = robots.filter((robot: any) => robot.name.toLowerCase().includes(searchField.toLowerCase()));
   return (
     <div className={styles.app}>
-      <h1 className='f1'>RoboFriends</h1>
+      <Header title='RoboFriends'/>
       <SearchBox setSearch={onSearchChange} searchValue={searchField} />
       <Scroll>
         <ErrorBoundary>
