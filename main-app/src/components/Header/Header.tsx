@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import styles from './Header.module.scss';
+
 class Header extends Component<any, any> {
 
     shouldComponentUpdate() {
@@ -10,7 +12,7 @@ class Header extends Component<any, any> {
 
         return (
             <div>
-                <h1 className='f1'>{title}</h1>
+                <h1 className={`f1 ${styles.title}`}>{title}</h1>
             </div>
         )
     }
