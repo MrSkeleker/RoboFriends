@@ -1,6 +1,6 @@
 # RoboFriends
 
-A small demo application that is developed using React and Redux, which is developed in multiple iterations tagged as follows:
+A small demo application that is developed using React and Redux, over multiple iterations tagged as follows:
 
   v1.0 - The initial React App
 
