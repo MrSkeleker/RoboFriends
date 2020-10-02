@@ -39,7 +39,7 @@ export const requestRobots = (state = initialStateRequest, action: any) => {
             return {
                 ...state,
                 error: action.payload,
-                isPending: true
+                isPending: false
             }
         default:
             return state;

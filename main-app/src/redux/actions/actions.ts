@@ -6,9 +6,9 @@ export const setSearchField = (text: string) => ({
     payload: text
 })
 
-export const requestRobots = () => (dispatch: any) => {
+export const requestRobots = (): any => (dispatch: any) => {
     dispatch({type: ActionTypes.REQUEST_ROBOTS_PENDING})
-    fetch(robotsDataUrl)
+    return fetch(robotsDataUrl)
       .then(response => response.json())
       .then(data => dispatch({type: ActionTypes.REQUEST_ROBOTS_SUCCESS, payload: data}))
       .catch(err => dispatch({type: ActionTypes.REQUEST_ROBOTS_FAILED, payload: err}));

@@ -4,7 +4,7 @@ import styles from './Card.module.scss';
 interface CardProps {
     id: number;
     name: string;
-    username: string;
+    username?: string;
     email: string;
 }
 

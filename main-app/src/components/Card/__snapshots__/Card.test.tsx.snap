@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Card Component 1`] = `
+<div
+  className="tc bg-light-green dib br4 pa3 ma2 grow bw2 shadow-5 card"
+>
+  <img
+    alt="robot"
+    src="https://robohash.org/robot-1?size=200x200"
+  />
+  <div>
+    <h2>
+      Test
+    </h2>
+    <p>
+      test@test.com
+    </p>
+  </div>
+</div>
+`;

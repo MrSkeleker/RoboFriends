@@ -1,36 +1,12 @@
-import React, {useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-
-import styles from './App.module.scss';
-
-import CardsList from '../components/CardsList/CardsList';
-import SearchBox from '../components/SearchBox/SearchBox';
-import Scroll from '../components/Scroll/Scroll';
-import Header from '../components/Header/Header';
-import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary';
 
 import { setSearchField, requestRobots } from '../redux/actions/actions';
 
-function App(props: any) {
-  const {robots, isPending, searchField, onSearchChange, onRequestRobots} = props;
-  useEffect(() => {
-    onRequestRobots();
-  }, [onRequestRobots]);
+import MainPage from '../components/MainPage/MainPage';
 
-  const filtredRobots = robots.filter((robot: any) => robot.name.toLowerCase().includes(searchField.toLowerCase()));
-  return (
-    <div className={styles.app}>
-      <Header title='RoboFriends'/>
-      <SearchBox setSearch={onSearchChange} searchValue={searchField} />
-      <Scroll>
-        <ErrorBoundary>
-          {isPending
-            ? <div className={styles.loader} />
-            : <CardsList robots={filtredRobots} />}
-        </ErrorBoundary>
-      </Scroll>
-    </div>
-  );
+function App(props: any) {
+  return <MainPage {...props}/>
 }
 
 const mapStateToProps = (state: any) => ({

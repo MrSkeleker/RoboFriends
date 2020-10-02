@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test MainPage Component test base component 1`] = `
+<div
+  className="mainPage"
+>
+  <Header
+    title="RoboFriends"
+  />
+  <SearchBox
+    searchValue=""
+    setSearch={[MockFunction]}
+  />
+  <Scroll>
+    <ErrorBoundary>
+      <CardsList
+        robots={
+          Array [
+            Object {
+              "email": "john@gmail.com",
+              "id": -1,
+              "name": "John",
+            },
+            Object {
+              "email": "tom@gmail.com",
+              "id": -2,
+              "name": "Tom",
+            },
+          ]
+        }
+      />
+    </ErrorBoundary>
+  </Scroll>
+</div>
+`;
+
+exports[`Test MainPage Component test isPending branches 1`] = `
+<div
+  className="mainPage"
+>
+  <Header
+    title="RoboFriends"
+  />
+  <SearchBox
+    searchValue=""
+    setSearch={[MockFunction]}
+  />
+  <Scroll>
+    <ErrorBoundary>
+      <div
+        className="loader"
+      />
+    </ErrorBoundary>
+  </Scroll>
+</div>
+`;
